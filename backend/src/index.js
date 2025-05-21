@@ -15,10 +15,10 @@ app.use(helmet());
 app.use(express.json());
 
 const pool = new Pool({
-  host: "rc1a-3n15f88sd5nq2oau.mdb.yandexcloud.net",
-  database: "db1",
-  user: "user1",
-  password: "qwertyuio",
+  host: "-",
+  database: "-",
+  user: "-",
+  password: "-",
   port: 6432,
   ssl: {
     rejectUnauthorized: false 
@@ -29,8 +29,8 @@ const s3Client = new S3Client({
   region: 'default-ru-central1',
   endpoint: 'https://storage.yandexcloud.net',
   credentials: {
-    accessKeyId: "YCAJE8Omc0CdXJuwSzrFxLpcg",
-    secretAccessKey: "YCM7uiuSXFX4MjXQrYvt8vyfcaLV_ggxqQ6WFQFR"
+    accessKeyId: "-",
+    secretAccessKey: "-"
   }
 });
 
@@ -38,8 +38,8 @@ const sqsClient = new SQSClient({
   region: 'ru-central1',
   endpoint: 'https://message-queue.api.cloud.yandex.net',
   credentials: {
-    accessKeyId: "YCAJE8Omc0CdXJuwSzrFxLpcg",
-    secretAccessKey: "YCM7uiuSXFX4MjXQrYvt8vyfcaLV_ggxqQ6WFQFR"
+    accessKeyId: "-",
+    secretAccessKey: "-"
   }
 });
 

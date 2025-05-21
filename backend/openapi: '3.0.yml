@@ -1,0 +1,90 @@
+openapi: '3.0.3'
+info:
+  title: API Title
+  version: '1.0'
+servers:
+  - url: https://bba0semondf73sraglkt.containers.yandexcloud.net
+paths:
+  /api/notes:
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Notes"
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateNote'
+        required: true
+      responses:
+        '200':
+          description: OK
+
+  /api/notes/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Note"
+    put:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateNote'
+        required: true
+      responses:
+        '200':
+          description: OK
+    delete:
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    Notes:
+      type: array
+      items:
+        $ref: "#/components/schemas/Note"
+    Note:
+      type: object
+      required:
+        - id
+        - value
+        - created_at
+        - updated_at
+      properties:
+        id:
+          type: integer
+          format: int64
+        value:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    CreateNote:
+      type: object
+      required:
+        - value
+      properties:
+        value:
+          type: string
+         
+

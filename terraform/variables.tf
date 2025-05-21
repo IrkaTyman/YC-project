@@ -1,5 +1,5 @@
 variable "token" {
-  description = "y0__xC5sd2wAxjB3RMg9PT3tBIwv8aB2AcEtyg_SrVQ5U6yfFghgSvUoodQOA"
+  description = "-"
   type        = string
   sensitive   = true
 }
@@ -15,7 +15,7 @@ variable "folder_id" {
 }
 
 variable "db_password" {
-  description = "qwertyuio"
+  description = "-"
   type        = string
   sensitive   = true
 }

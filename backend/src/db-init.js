@@ -14,7 +14,6 @@ const pool = new Pool({
 
 const initializeDatabase = async () => {
   try {
-    // Создание таблицы notes
     await pool.query(`
       CREATE TABLE IF NOT EXISTS notes (
         id SERIAL PRIMARY KEY,
@@ -26,7 +25,6 @@ const initializeDatabase = async () => {
     
     console.log('Database schema initialized successfully');
     
-    // Добавление тестовых данных
     await pool.query(`
       INSERT INTO notes (value)
       VALUES 

@@ -2,10 +2,10 @@ const { Pool } = require('pg');
 require('dotenv').config();
 
 const pool = new Pool({
-  host: "rc1a-3n15f88sd5nq2oau.mdb.yandexcloud.net",
-  database: "db1",
-  user: "user1",
-  password: "qwertyuio",
+  host: "-",
+  database: "-",
+  user: "-",
+  password: "-",
   port: 6432,
   ssl: {
     rejectUnauthorized: false 
